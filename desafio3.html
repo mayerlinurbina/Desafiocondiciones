@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div>
+        <h2>Ingresar contraseña</h2>
+        <select id="number-1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="0">0</option>
+        </select>
+        <select id="number-2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="0">0</option>
+        </select>
+        <select id="number-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="0">0</option>
+        </select>
+    </div>
+    <div>
+        <p id="mensaje"></p>
+        <button id="btn-ingresar">Ingresar</button>
+    </div>
+    <script>
+        const btnIngresar = document.getElementById("btn-ingresar");
+        btnIngresar.addEventListener("click" , () => {
+            const number1 = document.getElementById("number-1").value;
+            const number2 = document.getElementById("number-2").value;
+            const number3 = document.getElementById("number-3").value;
+
+            const mensaje = document.getElementById ("mensaje")
+            const password = number1 + number2 + number3;
+
+            if (password == "911") {
+
+                mensaje.innerHTML = "Password 1 correcto";
+            }
+            else if (password == "714") {
+
+                mensaje.innerHTML = "password 2 correcto";
+            }
+            else {
+                mensaje.innerHTML = "password incorrecto";
+            }
+
+        })
+
+    </script>
+</body>
+</html>

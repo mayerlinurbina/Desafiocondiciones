@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Stickers solo hasta 10</h1>
+    <div class="stickers">
+        <div class="sticker">
+            <img src="./assets/imagenes/dragonball.png" alt="dragonball">
+            <input id="stickers1" type="number" placeholder="cantidad">
+        </div>
+        <div class="sticker">
+            <img src="./assets/imagenes/pikachu.png" alt="pikachu">
+            <input id="stickers2" type="number" placeholder="cantidad">
+        </div>
+        <div class="sticker">
+            <img src="./assets/imagenes/yami.png" alt="yami">
+            <input id="stickers3" type="number" placeholder="cantidad">
+        </div>
+    </div>
+    <div class="resultado-stickers">
+        <p id="mensaje"></p>
+        <button id="btn-stickers">Confirmar</button>
+    </div>
+    <script>
+        const btnStickers = document.getElementById("btn-stickers");
+        btnStickers.addEventListener("click", () => {
+            const stickers1 = document.getElementById("stickers1").value;
+            const stickers2 = document.getElementById("stickers2").value;
+            const stickers3 = document.getElementById("stickers3").value;
+
+            const mensaje = document.getElementById("mensaje");
+            const total = Number(stickers1) + Number(stickers2) + Number(stickers3);
+
+            if (total <= 10) {
+                mensaje.innerHTML = ` llevas ${total} stickers`
+            }
+            else {
+                mensaje.innerHTML = "Llevas demasiados stickers"
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
